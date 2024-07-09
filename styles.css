@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     /* 使用背景图片 */
-    background-image: url('background.jpg');
+    background-image: url('背景.png');
     /* 设置背景颜色，以防图片未加载时显示 */
     background-color: #f0f0f0;
     /* 设置背景图片的其他属性 */
