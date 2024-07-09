@@ -47,6 +47,17 @@ main {
     height: auto;
 }
 
+.video-container {
+    width: 100%; /* 容器宽度为100%，适应屏幕宽度 */
+    position: relative; /* 设置容器的定位上下文 */
+}
+
+video {
+    width: 100%; /* 视频宽度与容器相同 */
+    height: auto; /* 高度自动调整 */
+}
+
+
 footer {
     background-color: #4CAF50;
     color: white;
