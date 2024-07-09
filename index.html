@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>平时成绩调整主页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Scores软件</h1>
+        <nav>
+            <ul>
+                <li><a href="#features">特性</a></li>
+                <li><a href="#screenshots">截图</a></li>
+                <li><a href="#download">下载</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>欢迎来到Scores软件</h2>
+            <p>我们致力于创造简单而优雅的软件解决方案。</p>
+            <button onclick="window.location.href='#download';">立即下载</button>
+        </section>
+
+        <section id="features">
+            <h2>我们的特性</h2>
+            <div class="feature">
+                <img src="images/easy.png" alt="易用性图标">
+                <h3>易用性</h3>
+                <p>直观的界面设计，新手也能轻松上手。</p>
+            </div>
+            <div class="feature">
+                <img src="images/performance.png" alt="高性能图标">
+                <h3>高性能</h3>
+                <p>优化的算法，确保软件运行流畅。</p>
+            </div>
+            <div class="feature">
+                <img src="images/support.png" alt="技术支持图标">
+                <h3>技术支持</h3>
+                <p>24/7在线客服，随时解答您的疑问。</p>
+            </div>
+        </section>
+
+        <section id="screenshots">
+            <h2>软件截图</h2>
+            <div class="screenshot">
+                <img src="images/screenshot1.png" alt="软件截图1">
+                <p>主界面概览</p>
+            </div>
+            <div class="screenshot">
+                <img src="images/screenshot2.png" alt="软件截图2">
+                <p>高级功能演示</p>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>下载绿叶软件</h2>
+            <p>选择适合您的操作系统：</p>
+            <a href="https://example.com/download-windows"><button>Windows</button></a>
+            <a href="https://example.com/download-macos"><button>MacOS</button></a>
+            <a href="https://example.com/download-linux"><button>Linux</button></a>
+        </section>
+
+        <section id="contact">
+            <h2>联系我们</h2>
+            <form action="/submit-contact" method="post">
+                <label for="name">姓名:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">邮箱:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">消息:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <button type="submit">发送</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 绿叶软件. 版权所有.</p>
+    </footer>
+</body>
+</html>
