@@ -25,6 +25,24 @@ header {
     padding: 1em;
     text-align: center;
 }
+.footer-links {
+    text-align: center;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+}
 
 header nav ul {
     list-style: none;
