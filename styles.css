@@ -25,24 +25,6 @@ header {
     padding: 1em;
     text-align: center;
 }
-
-.footer-links {
-    display: flex; /* 使用 Flexbox 布局 */
-    justify-content: space-between; /* 在链接之间平均分配可用空间 */
-    align-items: center; /* 垂直居中对齐链接 */
-    width: 100%; /* 占据整个宽度 */
-    max-width: 1000px; /* 设置最大宽度以适应不同屏幕 */
-    margin: 0 auto; /* 居中显示 */
-    padding: 1rem; /* 内边距 */
-}
-
-.footer-links a {
-    flex-grow: 1; /* 让每个链接尽可能地占据空间 */
-    text-align: center; /* 文字居中 */
-    text-decoration: none; /* 移除下划线 */
-    color: #333; /* 文字颜色 */
-}
-
 header nav ul {
     list-style: none;
     padding: 0;
@@ -79,7 +61,21 @@ video {
     height: auto; /* 高度自动调整 */
 }
 
+.footer-links {
+    display: inline; /* 使用 Flexbox 布局 */
+    justify-content: space-between; /* 在链接之间平均分配可用空间 */
+    align-items: center; /* 垂直居中对齐链接 */
+    width: 100%; /* 占据整个宽度 */
+    max-width: 1000px; /* 设置最大宽度以适应不同屏幕 */
+    margin: 0 auto; /* 居中显示 */
+    padding: 1rem; /* 内边距 */
+}
 
+.footer-links a {
+    flex-grow: 1; /* 让每个链接尽可能地占据空间 */
+    text-decoration: none; /* 移除下划线 */
+    color: #333; /* 文字颜色 */
+}
 footer {
     background-color: #6A99C5;
     color: white;
