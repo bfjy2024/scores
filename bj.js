@@ -1,4 +1,3 @@
-<script>
     var colorArr = ['#1cf3ff','skyblue','orange'];
     var screenW = window.innerWidth;
     var screenH = window.innerHeight;
@@ -162,5 +161,3 @@
     }
     initPoints(POINT_NUM);
     drawFrame();
-
-</script>
