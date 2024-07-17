@@ -14,11 +14,7 @@ body {
     /*background-repeat: no-repeat; /* 不重复背景图片 */
     background-size: cover;       /* 背景图片覆盖整个容器 */
 }
-        span{
-            display: block;
-            position: absolute;
-            border-radius: 50%;
-        }
+
 
 header {
     background-color: #470125;
