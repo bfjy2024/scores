@@ -9,7 +9,7 @@ body {
     /* 使用背景图片 */
     /*background-image: url('背景.png');
     /* 设置背景颜色，以防图片未加载时显示 */
-    background-color: #f0f0f0;
+    background-color: #0072BD;
     /* 设置背景图片的其他属性 */
     /*background-repeat: no-repeat; /* 不重复背景图片 */
     background-size: cover;       /* 背景图片覆盖整个容器 */
@@ -77,7 +77,7 @@ video {
     text-decoration: none;
 }
 footer {
-    background-color: #470125;
+    background-color: #0072BD;
     color: white;
     text-align: center;
     padding: 1em;
