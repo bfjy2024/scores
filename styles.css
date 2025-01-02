@@ -32,7 +32,7 @@ body {
   z-index: 1; /* 确保内容位于背景之上 */
 }
 header {
-    background-color: #B8B8E5;
+    background-color: #00008b;
     color: white;
     padding: 1em;
     text-align: center;
@@ -93,7 +93,7 @@ video {
     text-decoration: none;
 }
 footer {
-    background-color: #B8B8E5;
+    background-color: #00008b;
     color: white;
     text-align: center;
     padding: 1em;
