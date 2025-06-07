@@ -1,113 +1,445 @@
+/* 基础重置与全局样式 */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* styles.css */
-
 body {
-    font-family: Arial, sans-serif;
-    /* 使用背景图片 */
-    /*background-image: url('背景.png');
-    /* 设置背景颜色，以防图片未加载时显示 */
-    background-color: #f0f0f0;
-    /* 设置背景图片的其他属性 */
-    /*background-repeat: no-repeat; /* 不重复背景图片 */
-    background-size: cover;       /* 背景图片覆盖整个容器 */
+    font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
 }
 
+/* 背景层样式 */
 #bj {
-  position: fixed; /* 或absolute */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* 确保背景位于所有其他内容之下 */
-  background-image: url('your-background-url');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
 }
+
 #content {
-  position: relative;
-  z-index: 1; /* 确保内容位于背景之上 */
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
+
+/* 头部样式 */
 header {
-    background-color: #21499a;
+    background: linear-gradient(135deg, #3a4a6b, #1e2a4a);
     color: white;
-    padding: 1em;
+    padding: 1.5rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 1.2rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #ffd166;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffd166;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* 主要内容区域 */
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* 英雄区域 */
+#hero {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 245, 0.95));
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(154, 52, 124, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+#hero button {
+    background: linear-gradient(45deg, #9A347C, #6a1b9a);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(154, 52, 124, 0.3);
+}
+
+#hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(154, 52, 124, 0.4);
+    background: linear-gradient(45deg, #6a1b9a, #9A347C);
+}
+
+/* 各部分通用样式 */
+section {
+    margin-bottom: 3rem;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid #f0f0f0;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(90deg, #9A347C, #3a4a6b);
+}
+
+section h3 {
+    font-size: 1.4rem;
+    color: #3a4a6b;
+    margin: 1.5rem 0 1rem;
+}
+
+/* 版本日志样式 */
+dl {
+    margin-left: 1.5rem;
+}
+
+dt {
+    font-weight: 600;
+    color: #9A347C;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+dd {
+    margin-left: 1.5rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* 截图和视频区域 */
+.screenshot {
+    margin: 1.5rem 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.screenshot:hover {
+    transform: scale(1.02);
+}
+
+.screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background: #000;
+}
+
+/* 下载区域 */
+#download {
     text-align: center;
 }
-header nav ul {
-    list-style: none;
-    padding: 0;
+
+#download p {
+    margin-bottom: 1.5rem;
+    color: #555;
 }
 
-header nav ul li {
-    display: inline;
-    margin-right: 1em;
-}
-
-header nav ul li a {
-    color: white;
+#download a {
+    display: inline-block;
+    margin: 0.5rem;
     text-decoration: none;
 }
 
-main {
-    max-width: 800px;
-    margin: auto;
-    padding: 1em;
+#download button {
+    background: linear-gradient(45deg, #3a4a6b, #1e2a4a);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(58, 74, 107, 0.3);
+    min-width: 120px;
 }
 
-.feature, .screenshot {
-    margin-bottom: 1em;
+#download button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(58, 74, 107, 0.4);
+    background: linear-gradient(45deg, #1e2a4a, #3a4a6b);
 }
 
-.feature img, .screenshot img {
+/* 联系表单样式 */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #3a4a6b;
+    font-weight: 500;
+}
+
+input, textarea {
     width: 100%;
-    height: auto;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-video {
-    width: 100%; /* 视频宽度与容器相同 */
-    height: auto; /* 高度自动调整 */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #9A347C;
+    box-shadow: 0 0 0 3px rgba(154, 52, 124, 0.2);
 }
 
-.footer-links {
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+form button {
+    background: linear-gradient(45deg, #9A347C, #6a1b9a);
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(154, 52, 124, 0.3);
+    display: block;
+    margin: 0 auto;
+}
+
+form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(154, 52, 124, 0.4);
+    background: linear-gradient(45deg, #6a1b9a, #9A347C);
+}
+
+/* 页脚样式 */
+footer {
+    background: linear-gradient(135deg, #2c3e50, #1a2533);
+    color: white;
+    padding: 2.5rem 0 1.5rem;
     text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-links h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #ffd166;
 }
 
 .footer-links ul {
-    list-style-type: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
 }
 
 .footer-links li {
-    display: inline-block;
-    color: white;
-    margin-right: 10px;
+    margin: 0 1rem;
 }
 
 .footer-links a {
-    color: #666;
+    color: #ddd;
     text-decoration: none;
-}
-footer {
-    background-color: #21499a;
-    color: white;
-    text-align: center;
-    padding: 1em;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
 }
 
-button {
-    background-color: #9A347C;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.footer-links a:hover {
+    color: #ffd166;
+    text-decoration: underline;
 }
 
-button:hover {
-    background-color: #9A347C;
+footer p {
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    nav ul li {
+        margin: 0 0.8rem;
+    }
+    
+    nav ul li a {
+        font-size: 1rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    #hero h2 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 1.5rem;
+    }
+    
+    #download button {
+        padding: 0.7rem 1.5rem;
+        min-width: 110px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+    
+    #hero {
+        padding: 2rem 1rem;
+    }
+    
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    section {
+        padding: 1.2rem;
+    }
+    
+    .footer-links ul {
+        flex-direction: column;
+    }
+    
+    .footer-links li {
+        margin: 0.3rem 0;
+    }
 }
